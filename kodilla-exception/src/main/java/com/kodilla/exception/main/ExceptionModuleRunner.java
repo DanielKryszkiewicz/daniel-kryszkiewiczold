@@ -8,7 +8,7 @@ public class ExceptionModuleRunner {
     public static void main(String args[]) {
 
         FileReaderWithoutHandling fileReader = new FileReaderWithoutHandling();
-        fileReader.readFile();
+
 
     }
 }
