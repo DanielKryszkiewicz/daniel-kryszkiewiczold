@@ -21,7 +21,7 @@ public class FileReader {
 
         } catch (IOException e) {
 
-            throw new FileReaderException();
+            throw new FileReaderException("blabla");
 
         } finally {
 
