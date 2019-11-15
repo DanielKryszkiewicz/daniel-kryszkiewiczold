@@ -5,6 +5,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class LoggerTestSuite {
+    private static LoggerTestSuite loggerTestSuite;
 
     @Test
     public void testLastLog(){
@@ -12,7 +13,7 @@ public class LoggerTestSuite {
         Logger logger = new Logger();
         logger.log("Daniel");
         //When
-        logger.getLastLog();
+        logger.getInstance().getLastLog();
         //Then
         Assert.assertTrue("Daniel",true);
     }
