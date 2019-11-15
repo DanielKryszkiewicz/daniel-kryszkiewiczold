@@ -9,9 +9,9 @@ import java.util.List;
 @Service
 public class Library {
     private final List<String> books = new ArrayList<>();
-    private LibraryDbController libraryDbController = new LibraryDbController();
+    private LibraryDbController libraryDbController;
 
-    @Autowired
+
     public Library(final LibraryDbController libraryDbController){
         this.libraryDbController = libraryDbController;
 
