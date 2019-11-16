@@ -7,6 +7,8 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class BoardConfig {
+    @Autowired
+    Board board;
 
     @Bean
     public Board getBoard(){
