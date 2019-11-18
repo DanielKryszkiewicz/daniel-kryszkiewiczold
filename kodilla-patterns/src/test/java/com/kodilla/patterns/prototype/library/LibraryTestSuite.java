@@ -38,13 +38,14 @@ public class LibraryTestSuite {
             deepClonedLibrary.setName("my Library - deep copy");
             } catch (CloneNotSupportedException e) {
             e.printStackTrace();
-            }
+        }
 
-            //When
+
+        //When
         library.removeBook(book4);
 
 
-            //Then
+        //Then
         Assert.assertEquals(3, library.getBooks().size());
         Assert.assertEquals(3, clonedLibrary.getBooks().size());
         Assert.assertEquals(4, deepClonedLibrary.getBooks().size());
