@@ -29,13 +29,13 @@ public class UserTestSuite {
         User daniel = new Millenials("Daniel");
 
         //When
-        String danielShoulUse = daniel.sharePost();
-        System.out.println("Daniel should use: "+danielShoulUse);
+        String danielShouldUse = daniel.sharePost();
+        System.out.println("Daniel should use: "+danielShouldUse);
         daniel.setSocialPublisher(new TwitterPublisher());
-        danielShoulUse = daniel.sharePost();
-        System.out.println("Daniel should now use: "+danielShoulUse);
+        danielShouldUse = daniel.sharePost();
+        System.out.println("Daniel should now use: "+danielShouldUse);
 
         //Then
-        Assert.assertEquals("[Twitter Publisher] using Twitter", danielShoulUse);
+        Assert.assertEquals("[Twitter Publisher] using Twitter", danielShouldUse);
     }
 }
