@@ -46,7 +46,7 @@ public class FlightSearch {
             System.out.println(e.getMessage());
 
         }finally{
-            System.out.println("Thank you for using our FlightSearcher!")
+            System.out.println("Thank you for using our FlightSearcher!");
         }
     }
 }

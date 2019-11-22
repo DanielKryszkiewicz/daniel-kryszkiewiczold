@@ -23,19 +23,4 @@ public class UserTestSuite {
         Assert.assertEquals("[Twitter Publisher] using Twitter", janekShouldUse);
         Assert.assertEquals("[Facebook Publisher] using Facebook", andrzejShouldUse);
     }
-    @Test
-    public void testIndividualSharingStrategy() {
-        //Given
-        User daniel = new Millenials("Daniel");
-
-        //When
-        String danielShouldUse = daniel.sharePost();
-        System.out.println("Daniel should use: "+danielShouldUse);
-        daniel.setSocialPublisher(new TwitterPublisher());
-        danielShouldUse = daniel.sharePost();
-        System.out.println("Daniel should now use: "+danielShouldUse);
-
-        //Then
-        Assert.assertEquals("[Twitter Publisher] using Twitter", danielShouldUse);
-    }
 }

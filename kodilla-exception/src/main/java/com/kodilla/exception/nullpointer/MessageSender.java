@@ -1,6 +1,5 @@
 package com.kodilla.exception.nullpointer;
 
-import sun.plugin2.message.Message;
 
 public class MessageSender {
 
