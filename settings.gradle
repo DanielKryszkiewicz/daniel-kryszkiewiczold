@@ -8,6 +8,6 @@ include 'kodilla-stream'
 include 'kodilla-exception'
 include 'kodilla-good-patterns'
 include 'kodilla-patterns'
-
+include 'kodilla-hibernate'
 
 
