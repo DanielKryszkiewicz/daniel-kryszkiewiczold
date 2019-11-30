@@ -13,13 +13,15 @@ public class TaskList {
     public TaskList() {
     }
 
-    public TaskList(int id,String description, String listName) {
+    public TaskList(String description, String listName) {
         this.id = id;
         this.listName = listName;
         this.description = description;
     }
 
-
+    @Id
+    @GeneratedValue
+    @NotNull
     @Column(name = "ID", unique = true)
     public int getId() {
         return id;
@@ -29,9 +31,7 @@ public class TaskList {
     public String getDescription() {
         return description;
     }
-    @Id
-    @GeneratedValue
-    @NotNull
+
     @Column(name = "LISTNAME")
     public String getListName() {
         return listName;
