@@ -19,13 +19,33 @@ import java.util.List;
 @SpringBootTest
 public class TaskFinancialDetailsDaoTestSuite {
     @Autowired
+    TaskFinancialDetailsDao taskFinancialDetailsDao;
+    @Autowired
     TaskDao taskDao;
+    private static final String DESCRIPTION = "Test: Learn Hibernate";
 
+    @Test
+    public void testFindByPaid() {
+        //Given
+        TaskFinancialDetails taskFinancialDetails =
+                new TaskFinancialDetails(new BigDecimal(115), false);
+        taskFinancialDetailsDao.save(taskFinancialDetails);
+        int id = taskFinancialDetails.getId();
+
+        //When
+        List<TaskFinancialDetails> resultList = taskFinancialDetailsDao.findByPaid(false);
+
+        //Then
+        Assert.assertEquals(6, resultList.size());
+
+        //CleanUp
+        taskFinancialDetailsDao.deleteById(id);
+    }
 
     @Test
     public void testTaskDaoSaveWithFinancialDetails() {
         //Given
-        Task task = new Task("dao", 30);
+        Task task = new Task(DESCRIPTION, 30);
         task.setTaskFinancialDetails(new TaskFinancialDetails(new BigDecimal(120), false));
 
         //When
@@ -38,5 +58,4 @@ public class TaskFinancialDetailsDaoTestSuite {
         //CleanUp
         //taskDao.deleteById(id);
     }
-
 }
