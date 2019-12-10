@@ -24,7 +24,7 @@ public class TaskListDaoTestSuite {
     @Autowired
     private TaskListDao taskListDao;
     private static final String description = "Learn Hibernate part 2";
-    private static final String listName = "LISTNAME";
+    private static final String listName = "listName";
 
 
     @Test
@@ -35,7 +35,7 @@ public class TaskListDaoTestSuite {
         //Then
         String listName = taskList.getListName();
         List<TaskList> readTaskList = taskListDao.findByListName(listName);
-        Assert.assertEquals("listName",readTaskList.get(0).getListName());
+        Assert.assertEquals("LISTNAME",readTaskList.get(0).getListName());
         //Cleanup
         taskListDao.delete(taskList);
 

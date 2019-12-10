@@ -6,18 +6,18 @@ import java.util.Date;
 
 @Entity
 @Table(name = "TASKS")
-public class Task {
+public final class Task {
     private int id;
     private String description;
     private Date created;
     private int duration;
+    private TaskFinancialDetails taskFinancialDetails;
 
     public Task(){
     }
 
     public Task(String description, int duration){
         this.description = description;
-        this.created = new Date();
         this.duration = duration;
     }
     @Id
@@ -55,5 +55,15 @@ public class Task {
 
     private void setDuration(int duration) {
         this.duration = duration;
+    }
+
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "TASKS FINANCIALS_ID")
+    public TaskFinancialDetails getTaskFinancialDetails() {
+        return taskFinancialDetails;
+    }
+
+    public void setTaskFinancialDetails(TaskFinancialDetails taskFinancialDetails) {
+        this.taskFinancialDetails = taskFinancialDetails;
     }
 }
