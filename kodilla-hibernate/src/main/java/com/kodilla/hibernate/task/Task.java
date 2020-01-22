@@ -1,7 +1,10 @@
 package com.kodilla.hibernate.task;
 
+
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+
 import java.util.Date;
 
 @Entity
@@ -31,8 +34,8 @@ public final class Task {
     public String getDescription() {
         return description;
     }
-    @Column(name = "CREATED")
     @NotNull
+    @Column(name = "CREATED")
     public Date getCreated() {
         return created;
     }
@@ -45,7 +48,7 @@ public final class Task {
         this.id = id;
     }
 
-    public void setDescription(String description) {
+    private void setDescription(String description) {
         this.description = description;
     }
 

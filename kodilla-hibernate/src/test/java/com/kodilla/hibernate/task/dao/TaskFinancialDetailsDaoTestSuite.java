@@ -4,7 +4,6 @@ import com.kodilla.hibernate.task.Task;
 import com.kodilla.hibernate.task.TaskFinancialDetails;
 import org.junit.Assert;
 import org.junit.Test;
-import org.junit.runner.Description;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -36,7 +35,7 @@ public class TaskFinancialDetailsDaoTestSuite {
         List<TaskFinancialDetails> resultList = taskFinancialDetailsDao.findByPaid(false);
 
         //Then
-        Assert.assertEquals(6, resultList.size());
+        Assert.assertEquals(1, resultList.size());
 
         //CleanUp
         taskFinancialDetailsDao.deleteById(id);
