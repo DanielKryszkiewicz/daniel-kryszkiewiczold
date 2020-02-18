@@ -16,9 +16,9 @@ public class BigmacTestSuite {
                 .build();
         System.out.println(bigmac);
         //When
-        int HowManySauces = bigmac.getSauces().size();
+        int howManySauces = bigmac.getSauces().size();
         //Then
-        Assert.assertEquals(2,HowManySauces);
+        Assert.assertEquals(2,howManySauces);
 
     }
 }
