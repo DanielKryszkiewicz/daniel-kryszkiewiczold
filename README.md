@@ -1,3 +1,2 @@
 # daniel-kryszkiewicz-kodilla-java
-Kurs Kodilla
-This is bunch exercises of Kodilla Java Developer course
+This is bunch of exercises made during Kodilla Java Developer course
